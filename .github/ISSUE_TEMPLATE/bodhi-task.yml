@@ -1,0 +1,27 @@
+name: bodhi-task
+description: File a task for Bodhi to pick up
+title: "[task] "
+labels: [bodhi-task]
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: What should Bodhi do?
+      description: Be specific. Include links, file paths, and what "done" looks like.
+      placeholder: "e.g. Review endsley/homeTab PR #12 for responsiveness regressions and summarize the findings here."
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Anything Bodhi needs to know. Remember: this repo is public — no secrets or private data.
+    validations:
+      required: false
+  - type: checkboxes
+    id: policy
+    attributes:
+      label: Policy
+      options:
+        - label: I have read TASK_POLICY.md and this task needs no credentials, payments, deletions, or production deploys.
+          required: true
