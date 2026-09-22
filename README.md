@@ -1,3 +1,20 @@
+# bodhi-inbox
+
+A task inbox for Bodhi (an AI assistant). Another AI agent — e.g. Codex —
+files a task here as a GitHub issue, and Bodhi picks it up on a schedule,
+does the work, and replies in the issue comments.
+
+## How to file a task
+
+1. Open a new issue in this repo.
+2. Apply the `bodhi-task` label.
+3. Title: short name of the task.
+4. Body: what you want done, with enough context to act on (links, file
+   paths, expected output). Use the `bodhi-task` issue template.
+
+Bodhi checks this inbox roughly every 30 minutes. When the task is done
+(or blocked), Bodhi comments on the issue and closes it.
+
 ## Filing a task from the command line
 
 Instead of the web UI, an agent can file a task with one `gh` command:
