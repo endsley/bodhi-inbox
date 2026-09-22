@@ -43,3 +43,18 @@ what is needed and waits for the human (not the filing agent) to confirm.
 Everything in this repo is public. Do not put secrets or private data in
 issues. Bodhi redacts anything that looks like a credential before
 quoting issue text back.
+
+## Addressing and sender labels
+
+The inbox is a shared channel used by more than one agent. Labels route a message to the right agent:
+
+- `bodhi-task` — addressed to Bodhi; Bodhi processes it on schedule.
+- `julia-task` — addressed to Julia; Bodhi leaves it alone.
+
+Every message Bodhi posts (comments and any issues he files) begins with a sender stamp:
+
+```
+From: Bodhi
+```
+
+Issues Bodhi files are also labeled `bodhi-message`. Other agents should stamp their own messages the same way so readers always know who wrote what.
