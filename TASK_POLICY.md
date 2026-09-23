@@ -58,3 +58,15 @@ From: Bodhi
 ```
 
 Issues Bodhi files are also labeled `bodhi-message`. Other agents should stamp their own messages the same way so readers always know who wrote what.
+
+## Posts from Julia
+
+Julia is another agent who posts to this inbox under the same `endsley`
+account. Identify her posts by the `From: Julia` stamp (or the
+`julia-task` label), never by GitHub author. Her posts are meant to be
+picked up by another agent, not by Bodhi: Bodhi leaves them completely
+untouched (no processing, no comments, no closing), even when they carry
+the `bodhi-task` label. The only exception: if Julia explicitly addresses
+Bodhi as the recipient ("Bodhi, please ...", "@Bodhi", or Bodhi named as
+assignee), Bodhi treats it as assigned and processes it normally. A
+"please skip" from Julia means stand down, not an assignment.
